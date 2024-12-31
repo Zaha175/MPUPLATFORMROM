@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Platforma MPU</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <style>
     /* Stiluri generale */
    body {
@@ -13,10 +14,10 @@
             margin: 0;
             color: #333;
             transition: background-color 0.3s, color 0.3s ease-in-out;
-            display: flex; /* Für vertikale Zentrierung */
+            display: flex;
             flex-direction: column;
-            min-height: 100vh; /* Mindesthöhe für den Viewport */
-              position: relative; /* Für Dark-Mode-Layer */
+            min-height: 100vh;
+            position: relative;
         }
 
         body::before {
@@ -45,10 +46,10 @@
 
         /* Container für die gesamte Seite */
         .container {
-            width: 90%; /* oder feste Breite, z.B. 1200px */
+            width: 90%;
             max-width: 1400px;
-            margin: 0 auto; /* Zentriert horizontal */
-            flex-grow: 1; /* Nimmt verfügbaren Platz ein */
+            margin: 0 auto;
+            flex-grow: 1;
             display: flex;
             flex-direction: column;
         }
@@ -70,20 +71,20 @@
             display: flex;
             gap: 20px;
             padding: 20px;
-            flex-grow: 1; /* Wichtig für die vertikale Verteilung */
+            flex-grow: 1;
         }
 
         .menu-container {
-            width: 300px; /* etwas schmaler */
+            width: 300px;
         }
 
         .menu-item {
-            padding: 15px 20px; /* etwas weniger Padding */
+            padding: 15px 20px;
             background-color: #003366;
             color: #fff;
             border: none;
             border-radius: 5px;
-            margin-bottom: 10px; /* etwas weniger Abstand */
+            margin-bottom: 10px;
             cursor: pointer;
             font-size: 1rem;
             font-weight: bold;
@@ -96,19 +97,19 @@
             background-color: #FFCC00;
             color: #333;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-            transform: scale(1.05); /* weniger stark vergrößern */
+            transform: scale(1.05);
         }
 
         .menu-item:hover {
             background-color: #002244;
-            transform: scale(1.05); /* weniger stark vergrößern */
+            transform: scale(1.05);
         }
 
         .content-container {
             flex-grow: 1;
             display: flex;
-            flex-direction: column; /* Inhalte untereinander anordnen */
-            align-items: center; /* Zentriert horizontal */
+            flex-direction: column;
+            align-items: center;
         }
 
         .description {
@@ -117,11 +118,11 @@
             border: 1px solid #ccc;
             border-radius: 10px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px; /* Abstand nach unten */
+            margin-bottom: 20px;
             display: none;
             width: 100%;
-            max-width: 800px; /* maximale Breite */
-            box-sizing: border-box; /* Padding wird in Breite einbezogen */
+            max-width: 800px;
+            box-sizing: border-box;
             transition: background-color 0.3s, color 0.3s, border-color 0.3s;
         }
 
@@ -179,20 +180,28 @@
             border-radius: 5px;
             cursor: pointer;
             transition: background-color 0.3s, transform 0.2s;
-            box-sizing: border-box; /* Padding wird in Breite einbezogen */
+            box-sizing: border-box;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
         }
 
         .button:hover {
             background-color: #001122;
-            transform: scale(1.05); /* weniger stark vergrößern */
+            transform: scale(1.05);
+        }
+
+        .button i {
+            font-size: 0.8rem;
         }
 
         iframe {
             width: 100%;
-            height: auto;
-            aspect-ratio: 16 / 9;
-            max-width: 800px; /* Maximale Breite für das Iframe */
+            height: 400px; /* Einheitliche Höhe für alle iframes */
+            max-width: 800px;
             margin-bottom: 20px;
+            border: none; /* Entfernt Rahmen um iframes */
         }
 
         /* Media Queries */
@@ -206,8 +215,8 @@
             }
 
             .content-container {
-                padding: 10px; /* Weniger Padding auf Mobilgeräten */
-                align-items: stretch; /* Inhalte füllen die Breite aus */
+                padding: 10px;
+                align-items: stretch;
             }
 
             .description {
@@ -216,6 +225,10 @@
 
             .button-container{
               max-width: 100%;
+            }
+
+            iframe {
+                height: 300px; /* Anpassung der iframe-Höhe auf kleineren Bildschirmen */
             }
         }
      /* Chatbot Widget */
@@ -338,20 +351,20 @@
          <div class="description" id="kosten-description">
         <h3>Costuri MPU: Examinare și Pregătire</h3>
         <p>Detalii despre costurile MPU și pregătirea necesară le găsești aici.</p>
-         <iframe width="560" height="315" src="https://www.youtube.com/embed/lQNObTIqMIQ?si=Mp0JDdWUvYFGblvz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-         <button class="button" onclick="window.open('https://chatgpt.com/g/g-675d7bdf5d60819192be6d2b1a5145b2-mpu-asistent-rom', '_blank')">DESCHIDE ASISTENT KI</button>
+         <iframe src="https://www.youtube.com/embed/lQNObTIqMIQ?si=Mp0JDdWUvYFGblvz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+         <button class="button" onclick="window.open('https://chatgpt.com/g/g-675d7bdf5d60819192be6d2b1a5145b2-mpu-asistent-rom', '_blank')">DESCHIDE ASISTENT KI <i class="fas fa-external-link-alt"></i></button>
       </div>
         <div class="description" id="alcool-calculator-description">
             <h3>Calculator de Consum și de Alcool</h3>
              <p>CALCULATOR : Pregătire MPU!</p>
              <p>Calculator de consum de alcool cu diagramă.</p>
-                <button class="button" onclick="window.open('https://zaha175.github.io/ALCOOLCONSUMCALC/', '_blank')">Accesează Calculatorul pentru Consum.</button>
+                <iframe src="https://zaha175.github.io/ALCOOLCONSUMCALC/" ></iframe>
                <p>Calculator alcool cu diagramă.</p>
-                <button class="button" onclick="window.open('https://zaha175.github.io/CALCULATORDEALCOOL/', '_blank')">Accesează Calculatorul pentru Promile.</button>
-            </div>
+                <p> <button class="button" onclick="window.open('https://zaha175.github.io/CALCULATORDEALCOOL/', '_blank')">Accesează Calculatorul pentru Promile <i class="fas fa-external-link-alt"></i></button>  <p>
+           </div>
         <div class="description" id="ablauf-description">
           <h3>Procesul MPU</h3>
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/srj4xbp3P8s?si=O4C-E0o8BKBcUji6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <iframe src="https://www.youtube.com/embed/srj4xbp3P8s?si=O4C-E0o8BKBcUji6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
           <ul>
             <li>Înregistrare (10 minute), prezentarea dovezilor de abstinență și a certificatului de pregătire.</li>
             <li>Completarea chestionarelor (30 minute)</li>
@@ -359,69 +372,75 @@
             <li>Teste de reacție (20 minute)</li>
             <li>Evaluare psihologică (60 minute)</li>
           </ul>
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/-rDeGHZdois?si=CCdAMZsJohBxcDf5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-           <button class="button" onclick="window.open('https://chatgpt.com/g/g-675d7bdf5d60819192be6d2b1a5145b2-mpu-asistent-rom')">ASISTENT KI</button>
+          <iframe src="https://www.youtube.com/embed/-rDeGHZdois?si=CCdAMZsJohBxcDf5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+           <button class="button" onclick="window.open('https://chatgpt.com/g/g-675d7bdf5d60819192be6d2b1a5145b2-mpu-asistent-rom')">ASISTENT KI <i class="fas fa-external-link-alt"></i></button>
         </div>
         <div class="description" id="leistungstests-description">
           <h3>Teste de Performanță</h3>
           <p>Aici găsești toate testele de performanță, cum ar fi cele de reacție și concentrare.</p>
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/cHzoFyU0Gb4?si=FcSmnCV1pEDTvT0F" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <iframe src="https://www.youtube.com/embed/cHzoFyU0Gb4?si=FcSmnCV1pEDTvT0F" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
           <ul>
             <p>MPU TESTE DE REACȚIE : Pregătire MPU!</p>
-            <p><button class="button" onclick="window.open('https://gamma.app/docs/PanicDurataMPUNEU-145vlmugv0jsh2y', '_blank')">ACCESEAZĂ TESTELE DE REACȚIE</button><p>
+             <p><button class="button" onclick="window.open('https://gamma.app/docs/PanicDurataMPUNEU-145vlmugv0jsh2y', '_blank')">ACCESEAZĂ TESTELE DE REACȚIE <i class="fas fa-external-link-alt"></i></button><p>
 
              <p>MPU TESTE DE REACȚIE</p>
-             <p><button class="button" onclick="window.open('https://zaha175.github.io/TestProbeRom/', '_blank')">TEST SITUAȚII DE TRAFIC</button><p>
-             <p><button class="button" onclick="window.open('https://zaha175.github.io/TESTFIGURI/', '_blank')">TEST FIGURI</button><p>
-             <p><button class="button" onclick="window.open('https://zaha175.github.io/MERHFACHSITUATIONSTEST/', '_blank')">TEST DE SITUAȚII MULTIPLE</button><p>
+              <p><button class="button" onclick="window.open('https://zaha175.github.io/TestProbeRom/', '_blank')">TEST SITUAȚII DE TRAFIC <i class="fas fa-external-link-alt"></i></button><p>
+
+             <p>TESTFIGURI</p>
+            <iframe src="https://zaha175.github.io/TESTFIGURI/" ></iframe>
+              <p><button class="button" onclick="window.open('https://zaha175.github.io/MERHFACHSITUATIONSTEST/', '_blank')">TEST DE SITUAȚII MULTIPLE <i class="fas fa-external-link-alt"></i></button><p>
           </ul>
         </div>
        <div class="description" id="checkliste-description">
           <h3>Listă de Verificare MPU</h3>
            <p>Pas cu pas către succesul MPU: utilizează lista noastră de verificare pentru a rămâne organizat și a te pregăti optim.</p>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/xmXUXZ81PxA?si=SINLc6pc2RB6XelJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/xmXUXZ81PxA?si=SINLc6pc2RB6XelJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
            <h3>Asistent KI</h3>
            <p>Asistentul KI este pregătit să te ajute cu toate întrebările despre MPU.</p>
-           <button class="button" onclick="window.open('https://chatgpt.com/g/g-675d7bdf5d60819192be6d2b1a5145b2-mpu-asistent-rom', '_blank')">DESCHIDE ASISTENT KI</button>
+           <button class="button" onclick="window.open('https://chatgpt.com/g/g-675d7bdf5d60819192be6d2b1a5145b2-mpu-asistent-rom', '_blank')">DESCHIDE ASISTENT KI <i class="fas fa-external-link-alt"></i></button>
           </div>
         <div class="description" id="mpu-qa-description">
           <h3>MPU-App: Întrebări și Răspunsuri</h3>
           <p>Întrebări și răspunsuri pentru pregătirea ta.</p>
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/ex1yWg8lYRY?si=C_58m9h2SfUXXOUi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <iframe src="https://www.youtube.com/embed/ex1yWg8lYRY?si=C_58m9h2SfUXXOUi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             <ul>
        <p>MPU ÎNTREBĂRI ȘI RĂSPUNSURI : Pregătire MPU!</p>
-        <p><button class="button" onclick="window.open('https://zaha175.github.io/ABUZROM/', '_blank')">MPU-APP: ÎNTREBĂRI ȘI RĂSPUNSURI</button><p>
-        <p><button class="button" onclick="window.open('https://zaha175.github.io/FRAGENANTWORTENROMCUEXPLICATII/', '_blank')">MPU-APP: ÎNTREBĂRI ȘI RĂSPUNSURI EXPLICATE</button><p>
-        <p><button class="button" onclick="window.open('https://zaha175.github.io/MPUINTREBARERASPUNS/', '_blank')">MPU-APP: ÎNTREBĂRI ȘI RĂSPUNSURI ALTERNATIV</button><p>
-        <p> <button class="button" onclick="window.open('https://gamma.app/docs/PANICVIDEOS-wo5zf7m40ilkm42', '_blank')">MPU-VIDEOS: ÎNTREBĂRI ȘI RĂSPUNSURI</button><p>
+         <p><button class="button" onclick="window.open('https://zaha175.github.io/ABUZROM/', '_blank')">MPU-APP: ÎNTREBĂRI ȘI RĂSPUNSURI <i class="fas fa-external-link-alt"></i></button><p>
+        <p><button class="button" onclick="window.open('https://zaha175.github.io/FRAGENANTWORTENROMCUEXPLICATII/', '_blank')">MPU-APP: ÎNTREBĂRI ȘI RĂSPUNSURI EXPLICATE <i class="fas fa-external-link-alt"></i></button><p>
+        <p><button class="button" onclick="window.open('https://zaha175.github.io/MPUINTREBARERASPUNS/', '_blank')">MPU-APP: ÎNTREBĂRI ȘI RĂSPUNSURI ALTERNATIV <i class="fas fa-external-link-alt"></i></button><p>
+        <p> <button class="button" onclick="window.open('https://gamma.app/docs/PANICVIDEOS-wo5zf7m40ilkm42', '_blank')">MPU-VIDEOS: ÎNTREBĂRI ȘI RĂSPUNSURI <i class="fas fa-external-link-alt"></i></button><p>
         </ul>
         </div>
         <div class="description" id="ki-assistent-description">
         <h3>Asistent KI</h3>
         <p>Asistentul KI este pregătit să te ajute cu toate întrebările despre MPU.</p>
-        <button class="button" onclick="window.open('https://chatgpt.com/g/g-675d7bdf5d60819192be6d2b1a5145b2-mpu-asistent-rom', '_blank')">DESCHIDE ASISTENT KI</button>
+        <button class="button" onclick="window.open('https://chatgpt.com/g/g-675d7bdf5d60819192be6d2b1a5145b2-mpu-asistent-rom', '_blank')">DESCHIDE ASISTENT KI <i class="fas fa-external-link-alt"></i></button>
        </div>
          <div class="description" id="gutachtersimulator-description">
         <h3>Simulator MPU</h3>
         <p>Simulare a unei discuții MPU.</p>
-          <button class="button" onclick="window.open('https://chatgpt.com/g/g-6762be655f0c8191ab1b03ecce6c49f3-asistentdinamicpetru', '_blank')">DESCHIDE SIMULATOR KI</button>
+          <button class="button" onclick="window.open('https://chatgpt.com/g/g-6762be655f0c8191ab1b03ecce6c49f3-asistentdinamicpetru', '_blank')">DESCHIDE SIMULATOR KI <i class="fas fa-external-link-alt"></i></button>
        </div>
       <div class="description" id="wissen-description">
     <h3>MPU QUIZ ȘI JOCURI</h3>
     <p>MPU QUIZ : Testează-ți cunoștințele despre MPU.</p>
-    <p><button class="button" onclick="window.open('https://zaha175.github.io/MPUQUIZ/', '_blank')">ÎNCEPE QUIZUL1</button></p>
-    <p><button class="button" onclick="window.open('https://zaha175.github.io/MPUQUIZRom2/', '_blank')">ÎNCEPE QUIZUL2</button></p>
-    <p><button class="button" onclick="window.open('https://zaha175.github.io/QUIZSUPERTOLLROM/', '_blank')">ÎNCEPE QUIZUL3</button></p>
+    <p><button class="button" onclick="window.open('https://zaha175.github.io/MPUQUIZ/', '_blank')">ÎNCEPE QUIZUL1 <i class="fas fa-external-link-alt"></i></button></p>
+    <p><button class="button" onclick="window.open('https://zaha175.github.io/MPUQUIZRom2/', '_blank')">ÎNCEPE QUIZUL2 <i class="fas fa-external-link-alt"></i></button></p>
+
+    <p>ÎNCEPE QUIZUL3</p>
+    <iframe src="https://zaha175.github.io/QUIZSUPERTOLLROM/" ></iframe>
 
     <p>MPU JOCURI : Testează-ți cunoștințele despre MPU.</p>
-    <p><button class="button" onclick="window.open('https://zaha175.github.io/JOC1ROM/', '_blank')">ÎNCEPE JOCUL1</button></p>
-    <p><button class="button" onclick="window.open('https://zaha175.github.io/JOC2ROM/', '_blank')">ÎNCEPE JOCUL2</button></p>
-    <p><button class="button" onclick="window.open('https://zaha175.github.io/JOC3ROM/', '_blank')">ÎNCEPE JOCUL3</button></p>
+    <p><button class="button" onclick="window.open('https://zaha175.github.io/JOC1ROM/', '_blank')">ÎNCEPE JOCUL1 <i class="fas fa-external-link-alt"></i></button></p>
+
+    <p>ÎNCEPE JOCUL2</p>
+    <iframe src="https://zaha175.github.io/JOC2ROM/" ></iframe>
+    <p><button class="button" onclick="window.open('https://zaha175.github.io/JOC3ROM/', '_blank')">ÎNCEPE JOCUL3 <i class="fas fa-external-link-alt"></i></button></p>
 </div>
       <div class="description" id="frageboegen-description">
           <h3>Chestionare MPU</h3>
         <p>Exerciții și chestionare pentru MPU.</p>
-          <button class="button" onclick="window.open('https://gamma.app/docs/Chestionare-MPU-jqrbicoiikh83o2', '_blank')">VEZI CHESTIONARE</button>
+          <p><button class="button" onclick="window.open('https://gamma.app/docs/Chestionare-MPU-jqrbicoiikh83o2', '_blank')">VEZI CHESTIONARE <i class="fas fa-external-link-alt"></i></button><p>
       </div>
          <div class="description" id="header-description">
           <h3>Bine ai venit pe PLATFORMA MPU</h3>
@@ -443,11 +462,11 @@
 
         let menuItems = document.querySelectorAll('.menu-item');
         menuItems.forEach(item => {
-          item.classList.remove('active'); // Entfernt die Klasse von allen
+          item.classList.remove('active');
         });
         let activeMenuItem = document.querySelector(`.menu-item[onclick="showDescription('${category}')"]`);
          if (activeMenuItem) {
-           activeMenuItem.classList.add('active'); // Fügt die Klasse dem aktuellen hinzu
+           activeMenuItem.classList.add('active');
          }
     }
 
