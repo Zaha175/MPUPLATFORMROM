@@ -322,12 +322,30 @@
             height: auto;
             margin-top: 10px;
         }
-  </style>
+   .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 Seitenverhältnis */
+            padding-top: 30px;
+            height: 0;
+            overflow: hidden;
+            margin-bottom: 15px;
+        }
+
+        .video-container iframe,  
+        .video-container object,  
+        .video-container embed {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+ </style>
 </head>
 
 <body>
 
-  <header>PLATFORMA MPU PREMIUM</header>
+  <header>PLATFORMA MPU PRO</header>
   <button class="dark-mode-toggle" onclick="toggleDarkMode()">Mod întunecat</button>
 
    <div id="chatbot-widget">
@@ -342,7 +360,8 @@
   <div class="container">
     <main>
       <div class="menu-container">
-        <div class="menu-item" onclick="showDescription('ablauf')">PROCESUL MPU</div>
+        <div class="menu-item" onclick="showDescription('header')">BINE AȚI VENIT!</div>
+       <div class="menu-item" onclick="showDescription('ablauf')">PROCESUL MPU</div>
         <div class="menu-item" onclick="showDescription('kosten')">COSTURI MPU: EXAMINARE ȘI PREGĂTIRE</div>
         <div class="menu-item" onclick="showDescription('alcool-calculator')">CALCULATOR DE ALCOOL</div>
         <div class="menu-item" onclick="showDescription('leistungstests')">TESTE DE PERFORMANȚĂ</div>
@@ -460,9 +479,13 @@
         <h3>Simulator MPU</h3>
         <p>
         <p>Simulare a unei discuții MPU.</p>
-          <button class="button" onclick="window.open('https://chatgpt.com/g/g-6780e4e94a788191bea7bdb6f863695a-asistentdinamiccostinel', '_blank')">DESCHIDE SIMULATOR KI <i class="fas fa-external-link-alt"></i></button>
+          <button class="button" onclick="window.open('https://chatgpt.com/g/g-6780e4e94a788191bea7bdb6f863695a-asistentdinamiccostinel', '_blank')">DESCHIDE SIMULATOR1 KI <i class="fas fa-external-link-alt"></i></button>
        <p>
-      <img src="https://cdn.gamma.app/fhpleqvbjim2f32/generated-images/ppTJoMZMeGPnTtdZU3_79.jpg" alt="Fiecare zi este o luptă!" style="width: 100%; height: auto;">
+         <button class="button"
+                        onclick="window.open('https://chatgpt.com/g/g-67647a1f4a488191940c4b0c92a4f2ea-k-i-kommandant-fur-mpu-abstinenz', '_blank')">DESCHIDE
+                        SIMULATOR2 KI <i class="fas fa-external-link-alt"></i></button>
+      <p>
+     <img src="https://cdn.gamma.app/fhpleqvbjim2f32/generated-images/ppTJoMZMeGPnTtdZU3_79.jpg" alt="Fiecare zi este o luptă!" style="width: 100%; height: auto;">
       <p>              
      <p>CUM FOLOSEȘTI SIMULATORUL:</p>
     <p><button class="button" onclick="window.open('https://zaha175.github.io/CHATBOTAIROM/', '_blank')">CUM FOLOSEȘTI SIMULATORUL! <i class="fas fa-external-link-alt"></i></button></p>
@@ -504,8 +527,14 @@
       <p>              
    </div>
          <div class="description" id="header-description">
-          <h3>Bine ai venit pe PLATFORMA MPU</h3>
-        <p>Apasă pe elementele din meniu, ca să afli mai multe.</p>
+          <h3>BINE AI VENIT PE PLATFORMA MPU!</h3>
+          <div class="video-container">
+          <video controls width="100%">
+            <source src="VIDEOROM.mp4" type="video/mp4">
+            Dein Browser unterstützt das Video-Tag nicht.
+        </video>
+    </div>
+   <p>Apasă pe elementele din meniu, ca să afli mai multe informații.</p>
     </div>
       </div>
     </main>
